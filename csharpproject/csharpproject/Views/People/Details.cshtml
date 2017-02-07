@@ -4,133 +4,21 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h4>Profile Page, yo</h4>
+<h4>Profile page, yo</h4>
 
 <div>
-    <h4>Person</h4>
+    <h1>
+        @Html.DisplayFor(model => model.Title)
+        @Html.DisplayFor(model => model.FirstName)
+        @Html.DisplayFor(model => model.MiddleName)
+        @Html.DisplayFor(model => model.LastName)
+    </h1>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.BusinessEntity.BusinessEntityID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BusinessEntity.BusinessEntityID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Employee.NationalIDNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Employee.NationalIDNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Password.PasswordHash)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password.PasswordHash)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PersonType)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PersonType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NameStyle)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NameStyle)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.MiddleName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.MiddleName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Suffix)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Suffix)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailPromotion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmailPromotion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AdditionalContactInfo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AdditionalContactInfo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Demographics)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Demographics)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.rowguid)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.rowguid)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ModifiedDate)
-        </dd>
-
-    </dl>
+    
+        <h6>
+            Last modified on: @Html.DisplayFor(model => model.ModifiedDate)
+        </h6>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.BusinessEntityID }) |

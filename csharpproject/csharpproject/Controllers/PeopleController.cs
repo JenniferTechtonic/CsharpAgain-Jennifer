@@ -21,6 +21,13 @@ namespace csharpproject.Controllers
             return View(people.ToList());
         }
 
+        // my thingy
+        public ActionResult Profiles(int idnumber)
+        {
+            var people = db.People.Find(idnumber);
+            return View(people);
+        }
+
         // GET: People/Details/5
         public ActionResult Details(int? id)
         {
